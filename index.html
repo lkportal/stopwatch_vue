@@ -13,14 +13,14 @@
   <div id="app">  
     <div class="conteiner-central">
         <div class="conteiner">
-            <h1 id="horas">{{horas}}</h1>
+            <h1><span>{{horasParte2}}</span><span>{{horas}}</span> </h1>
             <h1>:</h1>
-            <h1 id="minuto">{{minuto}}</h1>
+            <h1><span>{{minutoParte2}}</span><span>{{minuto}}</span> </h1>
             <h1>:</h1>
-            <h1 id="segundo">{{segundo}}</h1>
+            <h1><span>{{segundoParte2}}</span><span>{{segundo}}</span> </h1>
         </div>
         <div class="btn-conteiner">
-            <button v-once id="start" @click="time()">Start</button>
+            <button id="start" @click="!time()">Start</button>
             <button @click="stop()">Stop</button>
         </div>
     </div>
