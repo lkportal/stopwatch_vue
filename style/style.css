@@ -1,0 +1,31 @@
+body{
+    padding: 0;
+    margin: 0;}
+
+.conteiner-central{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px #AAADFF;
+    height: 200px;
+    margin: 5rem 3rem;
+    
+}
+
+.conteiner{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    
+    
+}
+h1{
+    font-size: 3rem;
+}
+.btn-conteiner{
+    padding: 3rem;
+}
+button{
+    padding: 1rem 2rem;
+    margin: 2rem;
+}
