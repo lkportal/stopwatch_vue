@@ -1,31 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
 body{
     padding: 0;
-    margin: 0;}
-
-.conteiner-central{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: solid 1px #AAADFF;
-    height: 200px;
-    margin: 5rem 3rem;
-    
+    margin: 0;
+} 
+div>h1{
+    font-family: 'Oswald', sans-serif;
 }
 
 .conteiner{
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
-    
-    
+    align-items:center;
+    margin-top: 3rem;  
+    border: solid 2px #CC6890;
+    width:350px;
+    height: 350px;
+    border-radius: 100%;
+    animation: rot 2s infinite ease-in-out;
+    border-left: solid 2px #FDCDE0
+
 }
+
 h1{
     font-size: 3rem;
+   
 }
 .btn-conteiner{
-    padding: 3rem;
+    display: flex;
+    margin-top:3rem ;
+    justify-content: center;
 }
 button{
-    padding: 1rem 2rem;
-    margin: 2rem;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+}
+
+span{
+    font-family: 'Wallpoet', cursive;
+}
+#app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

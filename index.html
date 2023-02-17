@@ -10,14 +10,16 @@
     <script src="./script/script.js" defer></script>
 </head>
 <body>
-  <div id="app">  
+  <div id="app"> 
+    <h1>Cronometro</h1> 
     <div class="conteiner-central">
+       
         <div class="conteiner">
-            <h1><span>{{horasParte2}}</span><span>{{horas}}</span> </h1>
+            <h1><span>{{horasParte1}}</span><span>{{horas}}</span> </h1>
             <h1>:</h1>
-            <h1><span>{{minutoParte2}}</span><span>{{minuto}}</span> </h1>
+            <h1><span>{{minutoParte1}}</span><span>{{minuto}}</span> </h1>
             <h1>:</h1>
-            <h1><span>{{segundoParte2}}</span><span>{{segundo}}</span> </h1>
+            <h1><span>{{segundoParte1}}</span><span>{{segundo}}</span> </h1>
         </div>
         <div class="btn-conteiner">
             <button id="start" @click="!time()">Start</button>

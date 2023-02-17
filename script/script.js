@@ -2,40 +2,38 @@ const vm = new Vue({
     el:'#app',
     data:{
         segundo: 0,
-        segundoParte2:0,
+        segundoParte1:0,
         minuto:0,
-        minutoParte2:0,
+        minutoParte1:0,
         horas:0,
-        horasParte2:0,
-        tempo:3
+        horasParte1:0,
+        tempo:60
     },
     methods:{
         time(){
           const timeSeg = setInterval(()=>{
             if(this.tempo > this.segundo){
                 this.segundo++
-                if(this.segundo == 3){
+                if(this.segundo >= 10){
                     this.segundo =0
-                    this.segundoParte2++
+                    this.segundoParte1++
                 }
             }
-            if(this.segundoParte2 > 3){ 
-                this.segundoParte2=0
+            if(this.segundoParte1 >= 6){ 
+                this.segundoParte1=0
                  this.minuto += 1
-                 if(this.minuto== 3){
+                 if(this.minuto >= 10){
                     this.minuto = 0
-                    this.minutoParte2 += 1
+                    this.minutoParte1 += 1
                  }
-            }if(this.minutoParte2 == 3){
-                this.minutoParte2 = 0
+            }if(this.minutoParte1 >=6){
+                this.minutoParte1 = 0
                 this.horas += 1
-                if(this.horas == 3){
+                if(this.horas >= 10 ){
                     horas=0
-                    this.horasParte2 +=1
-                    
-                }if(this.horasParte2 == 3){
-                    this.horasParte2 = 0
-                }
+                    this.horasParte1 +=1
+                }   
+               
             }
             },1000)
         }
