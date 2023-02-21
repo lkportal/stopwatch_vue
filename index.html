@@ -22,9 +22,10 @@
             <h1><span>{{segundoParte1}}</span><span>{{segundo}}</span> </h1>
         </div>
         <div class="btn-conteiner">
-            <button id="start" @click="!time()">Start</button>
+            <button id="start" v-once @click="time()">Start</button>
             <button @click="stop()">Stop</button>
         </div>
+        
     </div>
     </div>
     

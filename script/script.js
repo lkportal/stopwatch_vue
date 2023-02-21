@@ -7,11 +7,14 @@ const vm = new Vue({
         minutoParte1:0,
         horas:0,
         horasParte1:0,
-        tempo:60
+        tempo:60,
+        condicionalTempo:false,
+        timeSeg:null
     },
     methods:{
-        time(){
-          const timeSeg = setInterval(()=>{
+         time(){
+            
+           this.timeSeg = setInterval(()=>{
             if(this.tempo > this.segundo){
                 this.segundo++
                 if(this.segundo >= 10){
@@ -35,8 +38,19 @@ const vm = new Vue({
                 }   
                
             }
+           
             },1000)
-        }
+            
+        },
+        stop(){
+            
+          clearInterval(this.timeSeg)
+               
+         
+            }
+
+        
+        
       
         
     }
