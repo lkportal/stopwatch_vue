@@ -9,7 +9,7 @@ const vm = new Vue({
         horasParte1:0,
         tempo:60,
         timeSeg:null,
-        elements:`00:00:00`
+        elements:''
     },
     methods:{
          time(){
@@ -49,7 +49,10 @@ const vm = new Vue({
          
             },
         ResetMark(){
-           return this.elements += `<li>${this.horasParte1}${this.horas}:${this.minutoParte1}${this.minuto}:${this.segundoParte1}${this.segundo}</li>`
+          const dados= this.elements += `<li>${this.horasParte1}${this.horas}:${this.minutoParte1}${this.minuto}:${this.segundoParte1}${this.segundo}</li>`
+          if(dados.length >= 100){
+            this.elements = ''
+          }
         }    
 
         
