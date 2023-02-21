@@ -8,8 +8,8 @@ const vm = new Vue({
         horas:0,
         horasParte1:0,
         tempo:60,
-        condicionalTempo:false,
-        timeSeg:null
+        timeSeg:null,
+        elements:`00:00:00`
     },
     methods:{
          time(){
@@ -47,7 +47,10 @@ const vm = new Vue({
           clearInterval(this.timeSeg)
                
          
-            }
+            },
+        ResetMark(){
+           return this.elements += `<li>${this.horasParte1}${this.horas}:${this.minutoParte1}${this.minuto}:${this.segundoParte1}${this.segundo}</li>`
+        }    
 
         
         
