@@ -8,23 +8,48 @@ body{
 div>h1{
     font-family: 'Oswald', sans-serif;
 }
-
+.conteiner-central{
+    background-color: #7218AE;
+}
 .conteiner{
     display: flex;
     justify-content: center;
     align-items:center;
-    margin-top: 3rem;  
-    border: solid 2px #CC6890;
+    margin: 3rem 1rem;  
+    border: solid 5px#8AAD1F;
     width:350px;
     height: 350px;
     border-radius: 100%;
     animation: rot 2s infinite ease-in-out;
-    border-left: solid 2px #FDCDE0
+    background-color: #fff;
+    
+    animation: bordaRotate 2s infinite;
+   
 
+}
+@keyframes bordaRotate {
+   
+
+}
+
+@media  screen and (max-width:300px) {
+    .conteiner-central{
+        width: 90%;
+        margin: auto;
+    } 
+    .conteiner{
+        width: 100%;
+       
+      }
+      .button{
+        padding: 0;
+        margin: 0;
+      }
 }
 
 h1{
     font-size: 3rem;
+    
    
 }
 .btn-conteiner{
@@ -35,7 +60,8 @@ h1{
 button{
     margin: 0 1rem;
     padding: 0.5rem 1rem;
-    border: 1px solid  #FDCDE0;
+    border: 1px solid  #8AAD1F;
+    background-color: #8AAD1F;
 }
 
 span{
@@ -45,14 +71,21 @@ span{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #7218AE;
 }
 .list-time{
-    border: solid 2px purple;
-    margin-top: 3rem;
+    border: solid 2px #AD0709;
+    margin-top: 4rem;
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    border-radius: 15;
+    text-align: center;
+    
 }
 li{
     list-style: none;
+    border-bottom: 1px solid #000 ;
+    padding: 0.5rem;
+    color: #FFF;
     
 }
