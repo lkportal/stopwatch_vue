@@ -22,10 +22,10 @@
             <h1><span>{{segundoParte1}}</span><span>{{segundo}}</span> </h1>
         </div>
         <div class="btn-conteiner">
-            <button id="start" v-once @click="time()">Start</button>
+            <button id="start"  @click="time()">Start</button>
             <button @click="stop()">Stop</button>
-            <button @click="ResetMark()">Marca</button>
-            <button>Reseta</button>
+            <button @click="Mark()">Marca</button>
+            <button @click="reset()">Reseta</button>
         </div>
         <div class="list-time" v-html="elements">
 

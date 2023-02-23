@@ -9,12 +9,15 @@ const vm = new Vue({
         horasParte1:0,
         tempo:60,
         timeSeg:null,
-        elements:''
+        elements:'',
+        intervalo:false
     },
     methods:{
          time(){
-            
+            if(!this.intervalo){
            this.timeSeg = setInterval(()=>{
+            this.intervalo = true
+               
             if(this.tempo > this.segundo){
                 this.segundo++
                 if(this.segundo >= 10){
@@ -36,24 +39,38 @@ const vm = new Vue({
                     horas=0
                     this.horasParte1 +=1
                 }   
-               
-            }
-           
-            },1000)
             
+            
+        }
+         
+            },1000)
+        }
         },
         stop(){
+         
             
           clearInterval(this.timeSeg)
-               
+          this.intervalo = false    
          
             },
-        ResetMark(){
+        Mark(){
           const dados= this.elements += `<li>${this.horasParte1}${this.horas}:${this.minutoParte1}${this.minuto}:${this.segundoParte1}${this.segundo}</li>`
           if(dados.length >= 100){
             this.elements = ''
           }
-        }    
+          this.intervalo = false  
+        },
+        reset(){
+            clearInterval(this.timeSeg)
+            this.segundo = 0
+            this.segundoParte1 = 0
+            this.minuto = 0
+            this.minutoParte1 = 0
+            this.horas = 0
+            this.horasParte1 = 0
+            this.intervalo = false  
+        }
+           
 
         
         
